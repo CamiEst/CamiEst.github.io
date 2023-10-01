@@ -1,0 +1,23 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+}
+.navegador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.navegador li{
+    list-style: none;
+}
+.navegador li a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-inline: 20px;
+}
