@@ -2,6 +2,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
 }
 .navegador{
@@ -16,8 +17,17 @@ header{
 .navegador li a{
     text-decoration: none;
     list-style: none;
-    color: black;
+    color: rgb(255, 35, 160);
     font-size: 20px;
     font-weight: bold;
     margin-inline: 20px;
+}
+.Logo{
+    display: flex;
+    align-items: center;
+}
+.Logo .Nombre{
+    height: 30px;
+    margin-inline: 5px;
+
 }
