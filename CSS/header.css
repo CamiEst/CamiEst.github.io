@@ -1,0 +1,25 @@
+header{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+}
+
+.Logo{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.Nombre_Empresa{
+    font-size: 25px;
+    color: #f87f8f;
+    font-weight:900;
+    font-family:cursive;
+    text-shadow: 2px 2px 2px #ff0055;
+    
+}

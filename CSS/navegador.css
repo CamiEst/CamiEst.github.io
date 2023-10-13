@@ -1,33 +1,34 @@
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-}
 .navegador{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-}
-.navegador li{
-    list-style: none;
+    margin-right: 10px;
 }
 .navegador li a{
     text-decoration: none;
     list-style: none;
-    color: rgb(255, 35, 160);
-    font-size: 20px;
-    font-weight: bold;
-    margin-inline: 20px;
+    color: #f87f8f;
+    font-size: 18.5px;
+    font-weight: 400;
+    margin-inline: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.Logo{
-    display: flex;
-    align-items: center;
+.navegador li a:hover{
+    color: #ff0055;
 }
-.Logo .Nombre{
-    height: 30px;
-    margin-inline: 5px;
-
+.navegador .Inicio_de_Sesion a{
+    background-color: #f6e9ea;
+    padding: 3px 10px 5px 10px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #ff00556c;
+}
+.navegador .Inicio_de_Sesion:hover a{
+    border-color: #ff0055;
+    color: #ff0055;
+}
+.navegador .Inicio_de_Sesion{
+    margin-left: -10px;
 }
