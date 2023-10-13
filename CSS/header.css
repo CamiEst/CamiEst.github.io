@@ -1,13 +1,17 @@
 header{
-    width: 100vw;
+    width: 99vw;
     height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.81);
     position: fixed;
     z-index: 100;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
 }
 
 .Logo{

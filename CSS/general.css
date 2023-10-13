@@ -2,11 +2,23 @@ body{
     margin: 0px !important;
     background-image: url(../Img/background.avif);
     background-repeat: no-repeat;
-    background-size: 100vw !important;
-    background-position: fixed;
-    background-position-y: -55px;
-    z-index: -100;
+    background-size: 100vw;
+    background-position-y: -55px !important;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+main{
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 li{
     list-style: none !important;
+}
+@media(width<800px){
+    body{
+        background-position-y: 0px !important;
+    }
 }
