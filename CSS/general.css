@@ -12,13 +12,13 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 li{
     list-style: none !important;
 }
-@media(width<800px){
+@media(width<950px){
     body{
-        background-position-y: 0px !important;
+        background-image: url(../Img/background2.jpg);
     }
 }

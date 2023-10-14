@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     height: 280px;
-    margin-top: 260px;
+    margin-block: 180px 100px;
 }
 /* .banner img{
     width: 181px;
