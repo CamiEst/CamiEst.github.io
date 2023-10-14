@@ -4,12 +4,12 @@ body{
     background-repeat: no-repeat;
     background-size: 100vw;
     background-position-y: -55px !important;
-    overflow: hidden;
     background-attachment: fixed;
 }
 main{
     padding: 80px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
