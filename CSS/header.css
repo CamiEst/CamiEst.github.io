@@ -13,16 +13,16 @@ header{
     border-width: 2px;
     border-color: white;
 }
-.Icono{
-    height: 50px;
-    margin: 10px;
-}
-.Logo{
+.logo{
     text-decoration: none;
     display: flex;
     align-items: center;
 }
-.Nombre_Empresa{
+.logo__icono{
+    height: 50px;
+    margin: 10px;
+}
+.logo__name{
     font-size: 25px;
     color: #f87f8f;
     font-weight:900;

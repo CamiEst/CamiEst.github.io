@@ -1,11 +1,13 @@
-.navegador{
+.nav{
+    margin-right: 10px;
+}
+.nav__list{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-right: 10px;
 }
-.navegador li a{
+.nav__link, .nav__link__iniciarSesion{
     text-decoration: none;
     list-style: none;
     color: #f87f8f;
@@ -15,10 +17,10 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     white-space: nowrap;
 }
-.navegador li a:hover{
+.nav__item .nav__link:hover, .nav__link__iniciarSesion:hover{
     color: #ff0055;
 }
-.navegador .Inicio_de_Sesion a{
+.nav__link__iniciarSesion{
     background-color: #f6e9ea;
     padding: 3px 10px 5px 10px;
     border-style: solid;
@@ -26,10 +28,10 @@
     border-width: 2px;
     border-color: #ff00556c;
 }
-.navegador .Inicio_de_Sesion:hover a{
+.nav__link__iniciarSesion:hover{
     border-color: #ff0055;
     color: #ff0055;
 }
-.navegador .Inicio_de_Sesion{
+.nav__link__iniciarSesion{
     margin-left: -10px;
 }
