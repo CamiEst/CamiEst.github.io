@@ -18,8 +18,10 @@
 
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="">About</a></li>
-                <li class="nav__item"><a class="nav__link" href="">Contact</a></li>
+                <li class="nav__item"><a class="nav__link" href="">Explorar</a></li>
+                <li class="nav__item"><a class="nav__link" href="#info">Nosotros</a></li>
+                <li class="nav__item"><a class="nav__link" href="#servicios">Servicios</a></li>
+                <li class="nav__item"><a class="nav__link" href="">Reseñas</a></li>
                 <li class="nav__item"><a class="nav__link" href="">Registrarse</a></li>
                 <li class="nav__item"><a class="nav__link__iniciarSesion" href="">Iniciar Sesión</a></li>
             </ul>
@@ -30,48 +32,42 @@
             <h1 class="banner__title">¡Bienvenido a <span class="banner__highlight">CANDY KISS</span>!</h1>
             <p class="banner__text">La mejor tienda de dulces en línea.</p>
         </section>
-        <section class="info">
-            <h1 class="info__title">Sobre nosotros</h1>
-            <p class="info__text__1">
-                En <span class="info__highlight">Candy Kiss</span>, nos apasiona endulzar tus momentos especiales. Somos una empresa dedicada a ofrecerte
-                la mejor experiencia en dulcería y repostería, todo desde la comodidad de tu hogar. Nuestra misión es
-                crear deliciosos y tentadores manjares que deleiten tus sentidos y despierten una sonrisa en tu rostro.
-            </p>
-            <p class="info__text__2">
-                <span class="info__highlight">Nuestra Historia</span><br>
-                Candy Kiss nació de la pasión compartida por los dulces y la creatividad culinaria. Fundada por un
-                equipo de expertos en repostería, nuestra empresa se ha convertido en un destino confiable para los
-                amantes de los dulces. Desde el primer día, nos hemos comprometido a utilizar ingredientes frescos y de
-                la más alta calidad para elaborar nuestros productos, asegurando así que cada bocado sea una experiencia
-                verdaderamente deliciosa.
-            </p>
-            <p class="info__text__3">
-                <span class="info__highlight">Nuestros Productos</span><br>
-                En Candy Kiss, te ofrecemos una amplia variedad de dulces y postres cuidadosamente elaborados. Desde
-                exquisitos chocolates y caramelos artesanales hasta pasteles y galletas decoradas con precisión, cada
-                uno de nuestros productos está hecho con amor y dedicación. Nos esforzamos por innovar constantemente,
-                ofreciéndote sabores únicos y diseños creativos que harán que tus celebraciones sean inolvidables.
-            </p>
-            <p class="info__text__4">
-                <span class="info__highlight">Nuestro Compromiso</span><br>
-                Nos enorgullecemos de proporcionarte un servicio excepcional y productos que superan tus expectativas.
-                Estamos dedicados a la satisfacción del cliente y nos esforzamos por brindarte una experiencia de compra
-                sin complicaciones. Además, nos comprometemos a contribuir positivamente a nuestra comunidad y al medio
-                ambiente, adoptando prácticas sostenibles en nuestra operación diaria.
-            </p>
-            <p class="info__text__5">
-                En <span class="info__highlight">Candy Kiss</span>, no solo vendemos dulces; creamos momentos especiales y recuerdos felices. Gracias por
-                confiar en nosotros para endulzar tu vida.
+        <section id="info">
+            <h1 id="info__title">Sobre nosotros</h1>
+            <div id="info__container">
+                <div id="info__item">
+                    <p class="info__text">
+                        En <span class="info__highlight">Candy Kiss</span>, nos apasiona endulzar tus momentos especiales. Somos una empresa dedicada a ofrecerte
+                        la mejor experiencia en dulcería y repostería, todo desde la comodidad de tu hogar. Nuestra misión es
+                        crear deliciosos y tentadores manjares que deleiten tus sentidos y despierten una sonrisa en tu rostro.
+                    </p>
+                    <img class="info__image" src="/Img/img1.jpg" alt="Imagen de muestra 1">
+                </div>
+                <div class="info__subItem active">
+                    <img class="info__image" src="/Img/img1.jpg" alt="Imagen de muestra 1">
+                    <img class="zoom-button active" src="/Img/Zoom.png" alt="Icono ampliador">
+                </div>
+                <div class="info__subItem">
+                    <img class="info__image" src="/Img/img2.webp" alt="Imagen de muestra 2">
+                    <img class="zoom-button" src="/Img/Zoom.png" alt="Icono ampliador">
+                </div>
+                <div class="info__subItem">
+                    <img class="info__image" src="/Img/img3.webp" alt="Imagen de muestra 3">
+                    <img class="zoom-button" src="/Img/Zoom.png" alt="Icono ampliador">
+                </div>
+                <div  class="info__subItem">
+                    <img class="info__image" src="/Img/img4.jpg" alt="Imagen de muestra 4">
+                    <img class="zoom-button" src="/Img/Zoom.png" alt="Icono ampliador">
+                </div>
+            </div>
+            <p id="info__foot">
+                En <span>Candy Kiss</span>, no solo vendemos dulces; creamos momentos especiales y recuerdos felices. 
+                <br>Gracias por confiar en nosotros para endulzar tu vida.
                 <br><br>
                 ¡Bienvenido a nuestro mundo de dulzura!
             </p>
-            
-            <img class="info__image__1" src="/Img/img1.jpg" alt="Imagen de muestra 1">
-            <img class="info__image__2" src="/Img/img2.webp" alt="Imagen de muestra 2">
-            <img class="info__image__3" src="/Img/img3.webp" alt="Imagen de muestra 3">
-
         </section>
-        <section class="servicios">
+        <section id="servicios">
             <h1 class="servicios__title">Nuestros Servicios</h1>
             <div class="servicios__container">
                 <img class="servicios__item__image" src="/Img/Envio.svg" alt="Imagen de envio">
@@ -125,38 +121,12 @@
             </div>         
         </section>
         <section class="comentarios">
-            <h1 class="comentarios__title">Deja tu comentario</h1>
-            <div class="comentarios__container">
-                <div class="comentarios__item">
-                    <img class="comentarios__item__image" src="/Img/Comentario1.jpg" alt="Imagen de comentario 1">
-                    <h2 class="comentarios__item__title">Juan Perez</h2>
-                    <p class="comentarios__item__text">
-                        ¡Excelente servicio! Los productos son de muy buena calidad y el envío fue rápido y seguro. ¡Muy
-                        recomendado!
-                    </p>
-                </div>
-                <div class="comentarios__item">
-                    <img class="comentarios__item__image" src="/Img/Comentario2.jpg" alt="Imagen de comentario 2">
-                    <h2 class="comentarios__item__title">Maria Rodriguez</h2>
-                    <p class="comentarios__item__text">
-                        ¡Me encanta Candy Kiss! Sus productos son deliciosos y su servicio es excelente. ¡Los recomiendo
-                        mucho!
-                    </p>
-                </div>
-                <div class="comentarios__item">
-                    <img class="comentarios__item__image" src="/Img/Comentario3.jpg" alt="Imagen de comentario 3">
-                    <h2 class="comentarios__item__title">Pedro Gomez</h2>
-                    <p class="comentarios__item__text">
-                        ¡Los mejores dulces que he probado! Sus productos son deliciosos y su servicio es excelente. ¡Los
-                        recomiendo mucho!
-                    </p>
-                </div>
-            </div>
+            
         </section>
 
     </main>
     <footer>
-
+        <script src="/JS/informacion.js"></script>
     </footer>
 </body>
 
