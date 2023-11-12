@@ -20,7 +20,7 @@
             <ul class="nav__list">
                 <li class="nav__item"><a class="nav__link" href="">Explorar</a></li>
                 <li class="nav__item"><a class="nav__link" href="#info">Nosotros</a></li>
-                <li class="nav__item"><a class="nav__link" href="#servicios">Servicios</a></li>
+                <li class="nav__item"><a class="nav__link" href="#services">Servicios</a></li>
                 <li class="nav__item"><a class="nav__link" href="">Reseñas</a></li>
                 <li class="nav__item"><a class="nav__link" href="">Registrarse</a></li>
                 <li class="nav__item"><a class="nav__link__iniciarSesion" href="">Iniciar Sesión</a></li>
@@ -67,58 +67,96 @@
                 ¡Bienvenido a nuestro mundo de dulzura!
             </p>
         </section>
-        <section id="servicios">
-            <h1 class="servicios__title">Nuestros Servicios</h1>
-            <div class="servicios__container">
-                <img class="servicios__item__image" src="/Img/Envio.svg" alt="Imagen de envio">
-                <h2 class="servicios__item__title">Envío</h2>
-                <p class="servicios__item__text">
-                    Enviamos nuestros productos a cualquier parte de Colombia. Nuestros envíos son
-                    rápidos y seguros, y nuestros productos llegan a su destino en perfectas condiciones.
-                </p>
+        <section id="services">
+            <div class="services__title__container">
+                <h1 class="services__title">Nuestros Servicios</h1>
             </div>
-            <div class="servicios__container">
-                <img class="servicios__item__image" src="/Img/Entrega.svg" alt="Imagen de entrega">
-                <h2 class="servicios__item__title">Entrega</h2>
-                <p class="servicios__item__text">
-                    Nuestros productos son entregados en la puerta de tu casa, para que no tengas que salir a buscar
-                    tu pedido. Además, te ofrecemos la opción de entrega en persona, para que puedas recoger tu
-                    pedido en nuestra tienda.
-                </p>
+            <div class="services__card" onclick="flipCard(this)">
+                <div class="card">
+                    <div class="card-front">
+                        <img class="card__image" src="/Img/Envio.svg" alt="Imagen de envio">
+                    </div>
+                    <div class="card-back">
+                        <h2 class="card__title">Envío</h2>
+                        <p class="card__text">
+                            Enviamos nuestros productos a cualquier parte de Colombia. Nuestros envíos son
+                            rápidos y seguros, y nuestros productos llegan a su destino en perfectas condiciones.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="servicios__container">
-                <img class="servicios__item__image" src="/Img/Pago.svg" alt="Imagen de pago">
-                <h2 class="servicios__item__title">Pago</h2>
-                <p class="servicios__item__text">
-                    Aceptamos pagos en efectivo, tarjeta de crédito y débito, transferencia bancaria y PayPal. Nuestro
-                    sistema de pago es seguro y confiable, y te permite realizar tus compras de forma rápida y
-                    sencilla.
-                </p>
+            <div class="services__card" onclick="flipCard(this)">
+                <div class="card">
+                    <div class="card-front">
+                        <img class="card__image" src="/Img/Entrega.svg" alt="Imagen de entrega">
+                    </div>
+                    <div class="card-back">
+                        <h2 class="card__title">Entrega</h2>
+                        <p class="card__text">
+                            Nuestros productos son entregados en la puerta de tu casa, para que no tengas que salir a buscar
+                            tu pedido. Además, te ofrecemos la opción de entrega en persona, para que puedas recoger tu
+                            pedido en nuestra tienda.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="servicios__container">
-                <img class="servicios__item__image" src="/Img/Dulces.svg" alt="Imagen de dulces">
-                <h2 class="servicios__item__title">Dulces</h2>
-                <p class="servicios__item__text">Contamos con una amplia variedad de dulces de la más alta calidad, desde chocolates y caramelos hasta
-                    gomitas y chicles. Nuestros dulces son ideales para cualquier ocasión, ya sea para un regalo o para
-                    disfrutarlos tú mismo.
-                </p>
+            <div class="services__card" onclick="flipCard(this)">
+                <div class="card">
+                    <div class="card-front">
+                        <img class="card__image" src="/Img/Pago.svg" alt="Imagen de pago">
+                    </div>
+                    <div class="card-back">
+                        <h2 class="card__title">Pago</h2>
+                        <p class="card__text">
+                            Aceptamos pagos en efectivo, tarjeta de crédito y débito, transferencia bancaria y PayPal. Nuestro
+                            sistema de pago es seguro y confiable, y te permite realizar tus compras de forma rápida y
+                            sencilla.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="servicios__container">
-                <img class="servicios__item__image" src="/Img/Pasteles.svg" alt="Imagen de pastel">
-                <h2 class="servicios__item__title">Pasteles</h2>
-                <p class="servicios__item__text">Nuestros pasteles son el regalo perfecto para cualquier ocasión. Desde cumpleaños y aniversarios hasta
-                    graduaciones y baby showers, nuestros pasteles son la mejor manera de celebrar tus momentos
-                    especiales.
-                </p>
+            <div class="services__card" onclick="flipCard(this)">
+                <div class="card">
+                    <div class="card-front">
+                        <img class="card__image" src="/Img/Dulces.svg" alt="Imagen de dulces">
+                    </div>
+                    <div class="card-back">
+                        <h2 class="card__title">Dulces</h2>
+                        <p class="card__text">Contamos con una amplia variedad de dulces de la más alta calidad, desde chocolates y caramelos hasta
+                            gomitas y chicles. Nuestros dulces son ideales para cualquier ocasión, ya sea para un regalo o para
+                            disfrutarlos tú mismo.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="servicios__container">
-                <img class="servicios__item__image" src="/Img/Galletas.svg" alt="Imagen de galletas">
-                <h2 class="servicios__item__title">Galletas</h2>
-                <p class="servicios__item__text"> Nuestras galletas son el complemento perfecto. Desde galletas decoradas y rellenas para
-                    cumpleaños hasta galletas de chocolate para Navidad y Halloween, nuestras galletas
-                    son la mejor manera de endulzar tus celebraciones.
-                </p>
-            </div>         
+            <div class="services__card" onclick="flipCard(this)">
+                <div class="card">
+                    <div class="card-front">
+                        <img class="card__image" src="/Img/Pasteles.svg" alt="Imagen de pastel">
+                    </div>
+                    <div class="card-back">
+                        <h2 class="card__title">Pasteles</h2>
+                        <p class="card__text">Nuestros pasteles son el regalo perfecto para cualquier ocasión. Desde cumpleaños y aniversarios hasta
+                            graduaciones y baby showers, nuestros pasteles son la mejor manera de celebrar tus momentos
+                            especiales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services__card" onclick="flipCard(this)">
+                <div class="card">
+                    <div class="card-front">
+                        <img class="card__image" src="/Img/Galletas.svg" alt="Imagen de galletas">
+                    </div>
+                    <div class="card-back">
+                        <h2 class="card__title">Galletas</h2>
+                        <p class="card__text"> Nuestras galletas son el complemento perfecto. Desde galletas decoradas y rellenas para
+                            cumpleaños hasta galletas de chocolate para Navidad y Halloween, nuestras galletas
+                            son la mejor manera de endulzar tus celebraciones.
+                        </p>
+                    </div>
+                </div>
+            </div>   
         </section>
         <section class="comentarios">
             
@@ -127,6 +165,7 @@
     </main>
     <footer>
         <script src="/JS/informacion.js"></script>
+        <script src="/JS/servicios.js"></script>
     </footer>
 </body>
 

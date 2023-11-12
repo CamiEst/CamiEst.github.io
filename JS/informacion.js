@@ -5,8 +5,7 @@ const items = [
         la mejor experiencia en dulcería y repostería, todo desde la comodidad de tu hogar. Nuestra misión es
         crear deliciosos y tentadores manjares que deleiten tus sentidos y despierten una sonrisa en tu rostro.
         </p>`,
-        imagen: `<img class="info__image" src="/Img/img1.jpg" alt="Imagen de muestra 1">`,
-        ampliador: `<img class="zoom-button" src="/Img/Zoom.png" alt="Icono ampliador">`
+        imagen: `<img class="info__image" src="/Img/img1.jpg" alt="Imagen de muestra 1">`
     },
     {
         texto: `<p class="info__text">
@@ -17,8 +16,7 @@ const items = [
         la más alta calidad para elaborar nuestros productos, asegurando así que cada bocado sea una experiencia
         verdaderamente deliciosa.
         </p>`,
-        imagen: `<img class="info__image" src="/Img/img2.webp" alt="Imagen de muestra 2">`,
-        ampliador: `<img class="zoom-button" src="/Img/Zoom.png" alt="Icono ampliador">`
+        imagen: `<img class="info__image" src="/Img/img2.webp" alt="Imagen de muestra 2">`
     },
     {
         texto: `<p class="info__text">
@@ -28,8 +26,7 @@ const items = [
         uno de nuestros productos está hecho con amor y dedicación. Nos esforzamos por innovar constantemente,
         ofreciéndote sabores únicos y diseños creativos que harán que tus celebraciones sean inolvidables.
         </p>`,
-        imagen: `<img class="info__image" src="/Img/img3.webp" alt="Imagen de muestra 3">`,
-        ampliador:`<img class="zoom-button" src="/Img/Zoom.png" alt="Icono ampliador">`
+        imagen: `<img class="info__image" src="/Img/img3.webp" alt="Imagen de muestra 3">`
     },
     {
         texto:  `<p class="info__text">
@@ -39,8 +36,7 @@ const items = [
         sin complicaciones. Además, nos comprometemos a contribuir positivamente a nuestra comunidad y al medio
         ambiente, adoptando prácticas sostenibles en nuestra operación diaria.
         </p>`,
-        imagen: `<img class="info__image" src="/Img/img4.jpg" alt="Imagen de muestra 4">`,
-        ampliador: `<img class="zoom-button" src="/Img/Zoom.png" alt="Icono ampliador">`
+        imagen: `<img class="info__image" src="/Img/img4.jpg" alt="Imagen de muestra 4">`
     }
 ]
 
@@ -56,7 +52,7 @@ let posicionItem = 0;
 
 function cambiarItem(index) {
 
-    infoItem.innerHTML = items[index].texto + items[index].imagen + items[index].ampliador;
+    infoItem.innerHTML = items[index].texto + items[index].imagen;
 
     toggleActiveClass(buttons[posicionItem], false, subItems[posicionItem]);
     posicionItem = index;
