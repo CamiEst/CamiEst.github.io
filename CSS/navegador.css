@@ -27,11 +27,9 @@
     border-radius: 20px;
     border-width: 2px;
     border-color: #ff00556c;
+    margin-left: -10px;
 }
 .nav__link__iniciarSesion:hover{
     border-color: #ff0055;
     color: #ff0055;
-}
-.nav__link__iniciarSesion{
-    margin-left: -10px;
 }
