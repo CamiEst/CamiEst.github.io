@@ -10,10 +10,13 @@
 <body>
     <main>
         <div id="log-in">
+            <div id="not-found" class="hidden">
+                <h1>Email o Contraseña incorrectas.</h1>
+            </div>
             <form id="get-in" action="">
                 <h1>Iniciar Sesión</h1>
-                <input id="eamil" type="email" name="email" placeholder="Email" required>
-                <input id="password" type="password" name="password" placeholder="Contraseña" required>
+                <input id="email" type="email" name="email" placeholder="Email" autocomplete="username" required>
+                <input id="password" type="password" name="password" placeholder="Contraseña" autocomplete="current-password" required>
                 <input id="send" type="submit" value="Iniciar Sesión">
                 <div id="sign-up">
                     <p>¿Aún no tienes cuenta? <a href="registrarse.html">Registrarse.</a></p>
@@ -21,5 +24,6 @@
             </form>
         </div>
     </main>
+    <script src="/JS/iniciarSesion.js"></script>
 </body>
 </html>

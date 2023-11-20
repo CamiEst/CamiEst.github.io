@@ -86,3 +86,21 @@ input[type="email"]::placeholder, input[type="password"]::placeholder{
 #sign-up a{
     color: #f65066;
 }
+#not-found{
+    background-color: #ffffff;
+    width: 100%;
+    position: absolute;
+    z-index: 50;
+    bottom: 0;
+    box-shadow: 0px 0px 1px #741e2b;
+}
+#not-found h1{
+    margin-left: 10px;
+    font-size: 13px;
+    color: #f65066;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+}
+.hidden{
+    display: none;
+}
