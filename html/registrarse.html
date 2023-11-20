@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/registrarse.css">
+    <link rel="shortcut icon" href="/Img/Favicon.png">
+    <title>Registrarse</title>
+</head>
+
+<body>
+    <main>
+        <div id="sign-up">
+            <form id="register" action="">
+                <h1>Registrarse</h1>
+                <input id="name" type="text" name="name" placeholder="Nombres" required>
+                <input id="last-name" type="text" name="last-name" placeholder="Apellidos" required>
+                <input id="eamil" type="email" name="email" placeholder="Email" required>
+                <input id="password" type="password" name="password" placeholder="Contraseña" required>
+                <div id="genders">
+                    <p>Género</p>
+                    <input class="gender" id="woman" type="radio" name="gender" required>
+                    <label class="gender-name" for="woman">Mujer</label>
+                    <input class="gender" id="man" type="radio" name="gender" required>
+                    <label class="gender-name" for="man">Hombre</label>
+                    <input class="gender" id="other" type="radio" name="gender" required>
+                    <label class="gender-name" for="other">Otro</label>
+                    <input class="gender" id="not-specific" type="radio" name="gender" required>
+                    <label class="gender-name" for="not-specific">Prefiero no decir</label>
+                </div>
+                <input id="send" type="submit" value="Registrarse">
+                <div id="log-in">
+                    <p>¿Ya tienes cuenta? <a href="iniciarSesion.html">Iniciar Sesión.</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

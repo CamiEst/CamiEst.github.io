@@ -1,0 +1,115 @@
+body{
+    margin: 0px !important;
+    background-color: #edacac;
+    background-size: 100vw;
+    background-position-y: -55px !important;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#sign-up{
+    width: 60%;
+    height: 75%;
+    background-image: url(/Img/th.jpeg);
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    overflow: hidden;
+    box-shadow: 0px 0px 3px black;
+    position: relative;
+}
+#register{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.872);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 25px 100px 25px;
+    position: absolute;
+    animation: appear 1.3s ease-in-out 0s 1 reverse;
+}
+@keyframes appear {
+    0%{right: 0;}
+    100%{right: 100%;}
+}
+#register h1{
+    color: #f65066;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    align-self: center;
+}
+input[type="text"], input[type="email"], input[type="password"]{
+    background: none;
+    width: 80%;
+    height: 40px;
+    margin-inline: auto;
+    color: #f65066;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    margin-block: 5px;
+    border: none;
+    border-bottom: #f65066 1px solid;
+    outline: none;
+}
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder{
+    color: #edacac;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+}
+#genders{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#genders p{
+    color: #f65066;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+}
+.gender{
+    appearance: none;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border: #f87f8f 2px solid;
+}
+.gender:checked{
+    background-color: #f87f8f;
+    border-color: white;
+}
+.gender-name{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: #741e2b;
+    font-size: 10px;
+    margin-block: auto;
+}
+#send{
+    align-self: center;
+    width: 50%;
+    background-color: #f87f8f;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px black;
+    margin: 5px;
+}
+#log-in{
+    font-size: 13px;
+    color: #741e2b;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+}
+#log-in a{
+    color: #f65066;
+}
