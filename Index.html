@@ -16,16 +16,28 @@
             <h1 class="logo__name">CANDY KISS</h1>
         </a>
 
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="">Explorar</a></li>
+        <nav id="nav">
+            <ul id="nav__list">
+                <li class="nav__item"><a class="nav__link" href="/html/productos.html">Explorar</a></li>
                 <li class="nav__item"><a class="nav__link" href="#info">Nosotros</a></li>
                 <li class="nav__item"><a class="nav__link" href="#services">Servicios</a></li>
                 <li class="nav__item"><a class="nav__link" href="#review">Reseñas</a></li>
-                <li class="nav__item"><a class="nav__link" href="/html/registrarse.html">Registrarse</a></li>
-                <li class="nav__item"><a class="nav__link__iniciarSesion" href="">Iniciar Sesión</a></li>
+            </ul>
+            <ul id="nav__user">
+                <li id="sign-up"><a class="nav__link" href="/html/registrarse.html">Registrarse</a></li>
+                <li id="log-in"><a class="nav__link" href="/html/iniciarSesion.html">Iniciar Sesión</a></li>
+                <li id="user-name" class="hidden"></li>
+                <li id="user-icon" class="hidden"><img src="/Img/user-icon.jpg" alt=""></li>
+                <li id="log-out" class="hidden"><p onclick="logOut()">Cerrar Sesión</p></li>
             </ul>
         </nav>
+        <div id="log-out__confirm" class="hidden">
+            <h1>¿Seguro que desea cerrar la sesión?</h1>
+            <div>
+                <button class="deny" onclick="confirm(false)">No</button>
+                <button class="accept" onclick="confirm(true)">Sí</button>
+            </div>
+        </div>
     </header>
     <main>
         <section class="banner">
@@ -268,6 +280,7 @@
     <script src="/JS/informacion.js"></script>
     <script src="/JS/servicios.js"></script>
     <script src="/JS/reseñas.js"></script>
+    <script src="/JS/usuarioActual.js"></script>
 </body>
 
 </html>

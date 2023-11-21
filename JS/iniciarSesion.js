@@ -13,7 +13,8 @@ function log_in(){
     const user = JSON.parse(localStorage.getItem(userEmail));
 
     if(user && user.password === userPassword){
-        localStorage.setItem('HAS_LOGGED', 'true');
+        sessionStorage.setItem('HAS_LOGGED', 'true');
+        sessionStorage.setItem('USER_LOGGED', JSON.stringify(user));
         window.location = 'productos.html';
     }
     else{

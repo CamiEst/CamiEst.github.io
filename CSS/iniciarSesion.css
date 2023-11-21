@@ -14,7 +14,7 @@ main{
 #log-in{
     width: 60%;
     height: 75%;
-    background-image: url(/Img/th.jpeg);
+    background-image: url(/Img/login-signup.jpeg);
     background-size: cover;
     border-radius: 20px;
     display: flex;

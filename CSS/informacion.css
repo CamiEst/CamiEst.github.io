@@ -56,9 +56,6 @@
     align-self: self-start;
     width: 60%;
 }
-.active{
-    visibility: hidden;
-}
 .info__subItem{
     display: flex;
     align-items: center;

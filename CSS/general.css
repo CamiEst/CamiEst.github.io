@@ -17,6 +17,12 @@ main{
 li{
     list-style: none !important;
 }
+.hidden{
+    display: none !important;
+}
+.active{
+    visibility: hidden !important;
+}
 @media(width<950px){
     body{
         background-image: url(../Img/background2.jpg);
