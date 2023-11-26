@@ -4,14 +4,25 @@
     top: 0;
     width: 20%;
     height: 100%;
-    margin-top: 83px;
-    padding-top: 50px;
+    margin-top: 84px;
+    padding-top: 10px;
     background-color: rgb(255, 140, 140);
+    border: #f87f8f 10px solid;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
+#products__searcher h1{
+    margin: 0;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: #741e2b;
+}
 #products__searcher div{
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 #products__searcher label{
     font-size: 13px;
@@ -27,22 +38,13 @@
 #search-by-name{
     width: 180px;
     height: 25px;
-    border-radius: 10px;
-    border: #f65066 1px solid;
-    outline: none;
-    color: #f87f8f;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
-}
-#send{
-    font-size: 10px;
-    color: #f65066;
-    width: 50px;
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-    box-shadow: 0px 0px 2px #f65066;
+    border-radius: 8px;
+    border: white 3px solid;
     background-color: #ffd0d6;
+    box-sizing: border-box;
+    outline: none;
+    color: #bc3849;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
 }
 .search-by-type{
     display: flex;
@@ -53,12 +55,17 @@
     width: 150px;
     height: 30px;
     border-radius: 5px;
-    border: #f65066 1px solid;
+    border: #ffffff 2px solid;
+    box-sizing: border-box;
     outline: none;
     font-size: 13px;
     text-align: center;
-    color: #f65066;
+    color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    background-color: #ea3d54;
+}
+#search-by-type option{
+    color: #741e2b;
     background-color: #ffe2e6;
 }
 .search-by-price{
@@ -119,9 +126,10 @@
 }
 .search-by-occasion span{
     width: 150px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display:flex;
     align-items: center;
+    justify-content: space-between;
 }
 [name=search-by-occasion]{
     appearance: none;
@@ -130,10 +138,25 @@
     border-radius: 5px;
     border: #ffffff 2px solid;
     margin: 0;
-    margin-left: 10px;
     background-color: #ffd0d6;
 }
 [name=search-by-occasion]:checked{
     background-color: #bc3849;
 
+}
+#send{
+    margin: 0;
+    font-size: 12px;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    border: #ffffff 1px solid;
+    box-shadow: 0px 0px 2px #f65066;
+    background-color: #f65066;
+    align-self: center;
 }

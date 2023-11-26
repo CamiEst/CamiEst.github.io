@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", ()=>{prevent()});
+document.addEventListener("DOMContentLoaded", ()=>{
+    prevent();
+    isLogged();
+});
 
 function prevent(){
     const enter = document.getElementById('search-by-name');
@@ -98,4 +101,22 @@ function classComparator(product, classB){
     if(sameType) return true;
     else return false;
 
+}
+
+function isLogged(){
+    const userLogged = sessionStorage.getItem('HAS_LOGGED');
+    const car = document.querySelectorAll('.add-to-car');
+
+    car.forEach((shoppingCart)=>{
+        shoppingCart.addEventListener('click',()=>{
+            const notLog = document.getElementById('not-logged');
+            const isLog = document.getElementById('is-logged');
+            userLogged === "true" ? logged(isLog) : logged(notLog);
+        });
+    });
+}
+
+function logged(log){
+    log.classList.remove('hidden');
+    setTimeout(()=>{log.classList.add('hidden')}, 3000);
 }
