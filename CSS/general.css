@@ -20,6 +20,7 @@ li{
 }
 .hidden{
     display: none !important;
+    margin: 0 !important;
 }
 .active{
     visibility: hidden !important;
