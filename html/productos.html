@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/Index.css">
-    <link rel="shortcut icon" href="/Img/Favicon.png">
+    <link rel="stylesheet" href="../CSS/productos.css">
+    <link rel="shortcut icon" href="../Img/Favicon.png">
     <title>Candy Kiss</title>
 </head>
 
@@ -15,23 +15,652 @@
             <img class="logo__icon" src="/Img/Favicon.png" alt="Icono">
             <h1 class="logo__name">CANDY KISS</h1>
         </a>
-
         <nav id="nav">
             <ul id="nav__list">
-                <li class="nav__item"><a class="nav__link" href="../Index.html">Regresar</a></li>
+                <li class="nav__item"><a class="nav__link" href="../Index.html">Inicio</a></li>
             </ul>
             <ul id="nav__user">
-                <li id="sign-up"><a class="nav__link" href="registrarse.html">Registrarse</a></li>
-                <li id="log-in"><a class="nav__link" href="iniciarSesion.html">Iniciar Sesión</a></li>
-                <li id="log-out" class="hidden"></li>
+                <li id="sign-up"><a class="nav__link" href="/html/registrarse.html">Registrarse</a></li>
+                <li id="log-in"><a class="nav__link" href="/html/iniciarSesion.html">Iniciar Sesión</a></li>
                 <li id="user-name" class="hidden"></li>
-                <li id="user-icon" class="hidden"><img src="../Img/user-icon.jpg" alt=""></li>
+                <li id="user-icon" class="hidden"><img src="/Img/user-icon.jpg" alt=""></li>
+                <li id="log-out" class="hidden"><p onclick="logOut()">Cerrar Sesión</p></li>
             </ul>
         </nav>
+        <div id="log-out__confirm" class="hidden">
+            <h1>¿Seguro que desea cerrar la sesión?</h1>
+            <div>
+                <button class="deny" onclick="confirm(false)">No</button>
+                <button class="accept" onclick="confirm(true)">Sí</button>
+            </div>
+        </div>
     </header>
     <main>
-       
-
+        <form id="products__searcher" action="">
+            <div class="search-by-name">
+                <input id="search-by-name" name="search-by-text" type="text">
+                <input type="submit" name="send" id="send" value="Buscar">
+            </div>
+            <div class="search-by-type">
+                <select name="search-by-type" id="search-by-type">
+                    <option value="all" selected>Todo</option>
+                    <option value="cakes">Pasteles</option>
+                    <option value="cookies">Galletas</option>
+                    <option value="candies">Dulces</option>
+                    <option value="donuts">Donas</option>
+                    <option value="cupcakes">Pastelitos</option>
+                </select>
+            </div>
+            <div class="search-by-price">
+                <label for="search-by-price">Precio Máximo</label>
+                <input type="range" name="search-by-price" id="search-by-price" min="5000" max="300000" value="300000" oninput="updatePrice()">
+                <p class="valuePrice__container"><output for="search-by-price" id="valuePrice">300000</output>$</p>
+            </div>
+            <div class="search-by-occasion">
+                <span>
+                    <label for="birthday">Cumpleaños</label>
+                    <input type="checkbox" name="search-by-occasion" id="birthday" checked>
+                </span>
+                <span>
+                    <label for="wedding">Boda</label>
+                    <input type="checkbox" name="search-by-occasion" id="wedding" checked>
+                </span>
+                <span>
+                    <label for="halloween">Halloween</label>
+                    <input type="checkbox" name="search-by-occasion" id="halloween" checked>
+                </span>
+                <span>
+                    <label for="christmas">Navidad</label>
+                    <input type="checkbox" name="search-by-occasion" id="christmas" checked>
+                </span>
+                <span>
+                    <label for="vanlentine">San Valentin</label>
+                    <input type="checkbox" name="search-by-occasion" id="vanlentine" checked>
+                </span>
+                <span>
+                    <label for="other">Otro</label>
+                    <input type="checkbox" name="search-by-occasion" id="other" checked>
+                </span>
+            </div>
+        </form>
+       <section id="products__container">
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://cdn.easypeasy-lemonsqueezy.co.uk/wp-content/uploads/2018/10/IMG_3155.jpg" alt="Pastel de chocolate para cumpleaños">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Choclate Birthday Cake</h2>
+                <p class="product__price"><span class="price">150000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur quidem hic necessitatibus vel, at ratione magni voluptatem cumque architecto similique error. Cum, error! Nisi impedit perferendis explicabo, distinctio odit sapiente!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://www.wisconsincheeseman.com/dw/image/v2/BBVM_PRD/on/demandware.static/-/Sites-colony-master-catalog/default/dw294e3cde/large/sub_37/013226.png?sw=1500&sh=1500&sm=fit" alt="Dulces para Navidad">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Candies for christmas</h2>
+                <p class="product__price"><span class="price">25000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis quisquam tempore! Officia cupiditate nemo aliquid ut in non nisi maiores cumque magnam ea maxime, voluptatibus vitae quis repellat. Provident.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://s5.weddbook.com/t4/2/0/0/2004142/wedding-cakes.jpg" alt="Pastel de bodas de 4 pisos">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Four-tier Wedding Cake</h2>
+                <p class="product__price"><span class="price">300000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis dicta ducimus nemo aliquam. Vero sunt ullam, libero doloribus beatae provident deleniti tenetur facere quaerat veritatis quae iure, fugiat maiores?</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://sallysbakingaddiction.com/wp-content/uploads/2016/02/party-donuts-sallys-baking-addiction.jpg" alt="Donas en forma de corazón para San Valentin">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Valentine's Day Donuts</h2>
+                <p class="product__price"><span class="price">50000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, exercitationem doloremque? Odit nobis obcaecati officia rerum totam corrupti vero omnis in quasi! Rem qui corporis labore saepe autem ea provident.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://www.stylemotivation.com/wp-content/uploads/2020/01/sm-251-640x960.jpg" alt="Foto de cupcakes para san valetín">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Valentine's Day Cupcakes</h2>
+                <p class="product__price"><span class="price">10000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perferendis hic distinctio cupiditate alias explicabo doloribus exercitationem minima at. Voluptatum ratione dolor ea vel officiis nam voluptate hic suscipit saepe.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://i.pinimg.com/originals/68/e9/b7/68e9b774747e9e7d8448d2a812aa6544.jpg" alt="Foto de malvaviscos">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Marshmallows</h2>
+                <p class="product__price"><span class="price">5000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit ipsum sapiente rem voluptas incidunt quod neque amet ea veritatis laboriosam ipsa reiciendis ducimus optio suscipit, harum excepturi labore a blanditiis.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://i.pinimg.com/originals/ed/6b/13/ed6b1390606e22444da8bd476c35805c.jpg" alt="Galletas decoradas parqa bodas">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Wedding cookies</h2>
+                <p class="product__price"><span class="price">20000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/4-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, iste! Recusandae voluptates sapiente culpa sed aspernatur expedita velit vitae dicta, inventore dolorem magnam natus, modi voluptas neque impedit ratione amet?</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://i.pinimg.com/originals/7e/86/16/7e8616bfeb4fbcb692c73f8af86d4167.jpg" alt="Pastel con temática de halloween">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Halloween Cake</h2>
+                <p class="product__price"><span class="price">50000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/4-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, delectus, hic beatae, dolore labore non velit dolor provident itaque neque quo cum! Debitis officiis itaque voluptate accusantium nihil tempore architecto?</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://i.pinimg.com/736x/f4/aa/14/f4aa14fb9055035a5062894a32ed130c--barbie-bridal-studio-apartment.jpg" alt="Foto de gomas de mascar rosas">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Pink Gumballs Jar</h2>
+                <p class="product__price"><span class="price">25000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id culpa tenetur, repudiandae, reprehenderit officiis quos non amet laudantium molestiae totam ratione atque. Labore saepe quod adipisci. Omnis quod nemo corporis.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://www.lifeloveandsugar.com/wp-content/uploads/2021/03/Fresh-Strawberry-Cupcakes3.jpg" alt="Foto de cupcakes de fresa">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Strawberry Cupcakes</h2>
+                <p class="product__price"><span class="price">7000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus perspiciatis fugit alias pariatur ipsum tenetur velit ducimus, provident doloribus quis vel, impedit nisi saepe eos eveniet quisquam, soluta tempora porro?</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://ilovegreengorilla.com/wp-content/images/gummies-compressed.jpg" alt="Imagen de gomitas">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Gummies</h2>
+                <p class="product__price"><span class="price">7000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex omnis fugit voluptatum! Assumenda non maxime quasi. Impedit sint vitae illo maiores dicta itaque. Nesciunt quae hic pariatur nostrum doloremque quaerat!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://i.pinimg.com/originals/36/0b/b5/360bb5fd1e06e533f5a39a06c5b3bbcf.jpg" alt="Pastel de colores">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Rainbow Cake</h2>
+                <p class="product__price"><span class="price">55000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque dolore amet vero beatae voluptatum fuga, odit modi minima aperiam voluptatibus excepturi minus labore, tempora magnam voluptate. Eos, pariatur. Nemo, ea.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://cdn1.cheryls.com/wcsstore/CherylAndCompany/images/catalog/cco_VDY21_293091x.jpg" alt="Galletas para cumpleaños">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Birthday's Cookies</h2>
+                <p class="product__price"><span class="price">15000</span></p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate impedit nisi sequi rem, animi commodi necessitatibus! Minima eveniet blanditiis itaque. Ex laborum veniam consequuntur at esse facere, repudiandae quos id.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://www.sugarandsoul.co/wp-content/uploads/2015/12/easy-christmas-tree-cupcakes-recipe-4-of-9.jpg" alt="Foto de cupcakes para Navidad">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Cupcakes for Christmas</h2>
+                <p class="product__price"><span class="price">20000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptate excepturi consequatur esse quam nesciunt aperiam nostrum asperiores corrupti cupiditate quia beatae fuga modi aspernatur, saepe delectus similique vitae. Error?</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://houseofnasheats.com/wp-content/uploads/2020/09/halloween-sugar-cookies-17.jpg" alt="Galletas decoradas para halloween">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Halloween cookies</h2>
+                <p class="product__price"><span class="price">15000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/4-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, quos ad recusandae quaerat provident nobis earum ducimus eveniet vitae corporis cupiditate distinctio mollitia animi saepe qui similique laudantium aspernatur tenetur!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://3.bp.blogspot.com/_Pkz1H1nq3Bo/TPuvMtQ_qqI/AAAAAAAAAag/0TYOt79acO0/s1600/christmas%2Bcake.jpg" alt="Pastel para navidad">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Christmas Cake</h2>
+                <p class="product__price"><span class="price">100000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nulla eaque ad veniam, tenetur quis reprehenderit fugit! Esse, reiciendis asperiores sapiente laboriosam eius sit omnis amet et recusandae inventore totam.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://www.stayathomemum.com.au/wp-content/uploads/2015/06/Pinstake.com_..jpg" alt="Foto de pastel para baby shower">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Cake for Baby Shower</h2>
+                <p class="product__price"><span class="price">100000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam reiciendis ut quia cumque dicta quibusdam, harum inventore porro laborum itaque, cum veniam ducimus minus necessitatibus voluptates aspernatur hic dolores odit.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://imgix.elitedaily.com/uploads/image/2018/10/3/56cdfc26-0e1d-42f9-87cc-04f30f8617f0-halloween-donuts-lifestyle.jpg?w=610&fit=max&auto=format&q=70" alt="Donas decoradas para halloween">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Donuts for Halloween</h2>
+                <p class="product__price"><span class="price">35000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id velit, veniam quod doloribus numquam quos consequatur qui perspiciatis dolorum, quibusdam, in quasi magnam optio adipisci accusamus natus? Ducimus, dicta labore!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://cdn001.cakecentral.com/gallery/2017/02/900_valentines-day-887199e3GJo.JPG" alt="Pastel para San Valentín">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Valentine's Day Cake</h2>
+                <p class="product__price"><span class="price">40000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/4-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas optio doloremque illum! Vel, ullam at? Necessitatibus tempora minus distinctio dignissimos quas ipsam, voluptates harum cumque aspernatur eius rerum inventore corrupti?</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://wallpaperaccess.com/full/7487828.jpg" alt="Foto de donas con chispas de colores">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Sprinkle Donuts</h2>
+                <p class="product__price"><span class="price">8000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo vel deleniti quis, magnam voluptates fugiat obcaecati minus veniam voluptas exercitationem voluptatibus quod, repellendus pariatur, alias fugit iure ea autem eaque?</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://www.yourcupofcake.com/wp-content/uploads/2014/04/Sprinkle-Birthday-Cupcakes.jpg" alt="Foto de cupcakes para cumpleaños">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Sprinkle Birthday Cupcakes</h2>
+                <p class="product__price"><span class="price">12000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptatibus. Quibusdam inventore nisi eaque suscipit saepe modi, pariatur adipisci perspiciatis tempora atque recusandae laudantium numquam placeat repellat totam quas quo.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://rosebakes.com/wp-content/uploads/2012/10/Chocolate-Cake-with-Vanilla-Filling-and-Frosting-Ganache-Topping-and-Chocolate-Dipped-Strawberries-Whole.jpg" alt="Pastel de vainilla y Chocolate">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Chocolate and Vanilla Cake</h2>
+                <p class="product__price"><span class="price">60000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/4-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque et inventore facilis impedit, ducimus incidunt asperiores animi maiores cum culpa veniam dolores, sint voluptatibus eius eveniet dicta ut. Odio, quam!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://www.tigerfeng.com/wp-content/uploads/2017/11/22-Sweet-Candy-Gift-Ideas.jpg" alt="Dulces para regalo de cumpleaños">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Birthday's Candies</h2>
+                <p class="product__price"><span class="price">30000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eveniet est recusandae, culpa autem omnis in unde quibusdam perspiciatis eius eligendi ratione deserunt incidunt corrupti, repellat sed deleniti magnam possimus!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://thesweetandsimplekitchen.com/wp-content/uploads/2020/12/IMG_2898-2-819x1024.jpg" alt="Donas para Navidad">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Donuts for Christmas</h2>
+                <p class="product__price"><span class="price">10000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum amet tempore, voluptatem cumque, explicabo at velit sunt dolor eveniet, iure voluptate quo. Reprehenderit voluptate repellat molestias, earum magnam odit obcaecati?</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="http://www.tasteforcooking.com/wp-content/uploads/2014/10/Fun-Facts-About-Halloween-Candy.jpg" alt="Dulces para halloween">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Candies For Halloween</h2>
+                <p class="product__price"><span class="price">5000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis cupiditate laudantium dicta velit facere nesciunt adipisci iste repellendus. Dolores repellendus quis atque, architecto facilis qui. Voluptas similique laborum corrupti dolores!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://i.redd.it/k1dv14ko1avz.jpg" alt="Foto de cupcakes para halloween">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Cupcakes for Halloween</h2>
+                <p class="product__price"><span class="price">10000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/4-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, dolorem dicta autem sed inventore dolores perspiciatis quam numquam reprehenderit, quisquam eum aspernatur, fugiat sunt impedit. Ipsam minus odit dolore distinctio.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://archziner.com/wp-content/uploads/2019/11/christmas-cookie-icing-christmas-tree-gingerbread-man-house-shaped-cookies-placed-on-white-surface.jpg" alt="Galletas parqa Navidad">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Christmas Cookies</h2>
+                <p class="product__price"><span class="price">15000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/4-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus minus, voluptates optio et at earum magni enim harum aliquid voluptas nesciunt ratione similique dolores nostrum itaque porro quisquam asperiores laborum.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://wallpaperaccess.com/full/2295515.jpg" alt="Foto de donas de chocolate y chispas de colores">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Donuts With Colorful Sprinkles</h2>
+                <p class="product__price"><span class="price">15000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eius sint id tempore qui mollitia veritatis ut vitae earum. Inventore enim quis ullam pariatur ad obcaecati eligendi ipsam illum commodi!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://www.amummytoo.co.uk/wp-content/uploads/2020/02/DIY-valentines-chocolate-hearts-2.jpg" alt="Dulces de chocolate para san Valentin">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Valentine's Day Candies</h2>
+                <p class="product__price"><span class="price">5000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/4-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, iure rem. Nesciunt, blanditiis distinctio quaerat magnam, doloremque omnis ipsum obcaecati amet officiis totam tempore atque voluptates, nam dicta illo dolore!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://i.pinimg.com/originals/d5/fe/17/d5fe1706d084d0ad18617b96972ba270.jpg" alt="Imagen de donas de colores">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Rainbow Donuts</h2>
+                <p class="product__price"><span class="price">12000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/4-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias facilis voluptates, in ipsam consequatur doloremque officiis, minus natus veniam eos nihil, delectus accusamus dolores minima beatae rerum unde fuga incidunt.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://i.pinimg.com/originals/4c/c6/5a/4cc65a1f21dd826e1956866f9d271cce.jpg" alt="Galletas para San Valentín">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Valentine's Day Cookies</h2>
+                <p class="product__price"><span class="price">10000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/4-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis inventore iusto nostrum. Asperiores voluptate ipsa dolore dolorum dicta perspiciatis a earum eligendi alias at! Quia iure rerum nulla atque sequi!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://i.pinimg.com/originals/4e/92/e0/4e92e0da2ba220d9bfe735a1b7b20f31.jpg" alt="Donas para boda">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Wedding Day's Donuts</h2>
+                <p class="product__price"><span class="price">200000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam corrupti ut libero labore placeat voluptate temporibus magni ab deleniti quidem accusantium voluptates reprehenderit, amet distinctio doloribus nesciunt eum incidunt non.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg" alt="Foto de cupcake de chocolate">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Chocolate Cupcakes</h2>
+                <p class="product__price"><span class="price">7000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero dolore eum error facilis velit magnam, placeat provident ea ducimus. Commodi aperiam vitae possimus quisquam velit eveniet beatae magnam consequatur ipsa!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://sallysbakingaddiction.com/wp-content/uploads/2017/08/homemade-black-and-white-cookies-3.jpg" alt="Galletas de chocolate blanco y chocolate negro">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Black and White Chocolate Cookies</h2>
+                <p class="product__price"><span class="price">7000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum ipsa modi eligendi magnam veniam ea commodi, eveniet nisi. Voluptatem soluta ab fugiat neque voluptas magni, beatae facere vitae quam esse!</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://i.pinimg.com/originals/ca/a0/48/caa048f02b1936e883bca18749de729c.jpg" alt="Foto de donas italianas">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Italian Donuts</h2>
+                <p class="product__price"><span class="price">15000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, nostrum ea! Doloremque reprehenderit, hic ratione fugiat asperiores dolorum minus sapiente dolores earum ea ullam rem in nobis, culpa saepe minima.</p>
+            </div>
+        </div>
+        <div class="product__item">
+            <div class="product__image">
+                <img src="https://www.itakeyou.co.uk/idea/wp-content/uploads/2020/11/cake-idea-1.jpg" alt="Foto de pastel de fresa">
+            </div>
+            <div class="product__description">
+                <h2 class="product__name">Strawberry Cake</h2>
+                <p class="product__price"><span class="price">40000</span>$</p>
+                <img class="add-to-car" src="../Img/carro.png" alt="https://www.flaticon.es/iconos-gratis/carrito-inteligente Carrito inteligente iconos creados por Kiranshastry">
+                <div class="product__stars__container">
+                    <div>
+                        <img class="product__stars" src="../Img/5-stars.png" alt="https://www.flaticon.es/iconos-gratis/5-estrellas estrellas iconos creados por Alfredo Hernandez">
+                    </div>
+                </div>
+                <p class="product__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, aliquid animi quam iure corporis iusto distinctio facere nam expedita consequuntur praesentium quos exercitationem odit laborum numquam, assumenda ut eligendi. Expedita.</p>
+            </div>
+        </div>
+       </section>
     </main>
     <footer>
         <img class="footer__logo__icon" src="/Img/icono.png" alt="Icono">
@@ -60,10 +689,8 @@
             </p>
         </div>
     </footer>
-    <script src="/JS/informacion.js"></script>
-    <script src="/JS/servicios.js"></script>
-    <script src="/JS/reseñas.js"></script>
-    <script src="/JS/usuarioActual.js"></script>
+    <script src="../JS/usuarioActual.js"></script>
+    <script src="../JS/productos.js"></script>
 </body>
 
 </html>

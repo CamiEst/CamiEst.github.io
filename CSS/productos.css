@@ -1,0 +1,20 @@
+@import url(/CSS/general.css);
+@import url(/CSS/footer.css);
+@import url(/CSS/header.css);
+@import url(/CSS/navegador.css);
+@import url(/CSS/buscador.css);
+@import url(/CSS/items.css);
+
+body{
+    background-image: none;
+    background-color: white;
+}
+main{
+    padding-top: 83px;
+    flex-direction: row;
+    justify-content: end;
+}
+header{
+    background-color: white;
+    border-radius: 0px;
+}
