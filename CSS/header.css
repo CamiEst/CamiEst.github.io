@@ -30,5 +30,10 @@ header{
     font-weight:900;
     font-family:cursive;
     text-shadow: 2px 2px 2px #ff0055;
+}
+@media(width<=900px){
+
+}
+@media(width<=500px){
     
 }

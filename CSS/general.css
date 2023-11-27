@@ -14,6 +14,7 @@ main{
     align-items: center;
     height: 100% !important;
     width: 100% !important;
+    overflow-x: hidden;
 }
 li{
     list-style: none !important;
@@ -25,8 +26,19 @@ li{
 .active{
     visibility: hidden !important;
 }
-@media(width<950px){
+@media(width<=900px){
     body{
-        background-image: url(../Img/background2.jpg);
+        background-position-y: 0px !important;
+        padding: 0;
+        margin: 0;
+    }
+}
+@media(width<=500px){
+    body{
+        background-image: url(../Img/eb261053f3ed5834da6a7e01233b3f6f.jpg);
+        background-size: 100vh;
+        background-position-y: 0px !important;
+        padding: 0;
+        margin: 0;
     }
 }
