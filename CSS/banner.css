@@ -30,3 +30,13 @@
     text-shadow: 1px 0px 1px #ffffff;
     margin: 0px;
 }
+@media(width<=900px){
+    .banner{
+        margin-block: 10px;
+    }
+}
+@media(width<=500px){
+    .banner{
+        margin-block: 130px;
+    }
+}

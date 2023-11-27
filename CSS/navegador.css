@@ -3,6 +3,19 @@
     display: flex;
     flex-direction: row;
 }
+#nav__hidder{
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.81);
+    position: absolute;
+    top: 80px;
+    margin: 0;
+    border-radius: 15px;
+    border: solid 2px white;
+    box-sizing: border-box;
+    cursor: pointer;
+}
 #nav__list{
     display: flex;
     flex-direction: row;
@@ -144,4 +157,61 @@
 #log-out__confirm div button:hover{
     border: #ff0055 1px solid;
     color: #ff0055;
+}
+@media(width<=900px){
+    
+}
+@media(width<=500px){
+    #nav__hidder{
+        display: block;
+    }
+    #nav__list{
+        display: none;
+        height: 50px;
+        width: 400px;
+        top: 105px;
+        left: 250px;
+        padding: 0;
+        margin: 0;     
+        flex-direction: row;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+    .nav__item{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        width: 20%;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.81);
+        border: solid 1px white;
+        border-radius: 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .animation{
+        animation-name: appear;
+        animation-timing-function: ease-in-out;
+        animation-direction: reverse;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+    }
+    .reverseAnimation{
+        animation-name: disappear;
+        animation-timing-function: ease-in-out;
+        animation-direction:reverse;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes appear {
+        0%{right: 0;}
+        100%{right: 100%;}
+    }
+    @keyframes disappear {
+        0%{right: 100%;}
+        100%{right: 0;}
+    }   
 }
