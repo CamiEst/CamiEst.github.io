@@ -116,7 +116,7 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="p
 
 @media(500px < width <= 900px){
     input[type="text"], input[type="email"], input[type="password"]{
-        height: 30px;
+        height: 20px;
     }
 }
 @media(width <= 500px){

@@ -148,3 +148,18 @@
     font-weight: 400;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
 }
+
+@media(500px < width <= 900px){
+
+}
+@media(width <= 500px){
+
+}
+/* 
+@media(500px < width <= 900px){
+
+}
+@media(width <= 500px){
+
+}
+*/
