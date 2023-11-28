@@ -26,7 +26,7 @@ li{
 .active{
     visibility: hidden !important;
 }
-@media(500px < width <= 900px){
+@media(500px < width <= 1100px){
     body{
         background-position-y: 0px !important;
         padding: 0;
@@ -35,7 +35,7 @@ li{
 }
 @media(width <= 500px){
     body{
-        background-image: url(../Img/eb261053f3ed5834da6a7e01233b3f6f.jpg);
+        background-image: url(../Img/background2.jpg);
         background-size: 100vh;
         background-position-y: 0px !important;
         padding: 0;

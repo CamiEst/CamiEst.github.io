@@ -158,9 +158,15 @@
     border: #ff0055 1px solid;
     color: #ff0055;
 }
-@media(500px < width <= 900px){
+@media(500px < width <= 1100px){
     #nav__list{
         display: flex !important;
+    }
+    .nav__item{
+        margin-inline: -6px;
+    }
+    #nav__user{
+        margin-right: -12px;
     }
 }
 @media(width <= 500px){
