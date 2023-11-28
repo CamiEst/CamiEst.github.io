@@ -144,11 +144,3 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="p
         100%{top: 100%;}
     }
 }
-/* 
-@media(500px < width <= 900px){
-    
-}
-@media(width <= 500px){
-
-}
-*/
