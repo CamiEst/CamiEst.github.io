@@ -187,15 +187,40 @@
     #products__searcher div{
         margin: 8px;
     }
+    #products__searcher h1{
+        font-size: 15px;
+    }
     .valuePrice__container{
         margin-top: 2px;
+        font-size: 10px;
     }
     .search-by-occasion span{
         margin-block: 2px;
     }
     #send{
         margin-inline: 25%;
+        margin-top: 1px;
+        height: 20px;
+        font-size: 9px;
+        padding: 2px;
     }
+    #products__searcher label{
+        font-size: 10px;
+        font-weight: 300;
+    }
+    #search-by-name{
+        height: 20px;
+    }
+    #search-by-type{
+        height: 20px;
+        font-size: 10px;
+    }
+    [name=search-by-occasion]{
+        appearance: none;
+        width: 14px;
+        height: 14px;
+    }
+    
 }
 @media(width <= 600px){
     #searcher__hidder{

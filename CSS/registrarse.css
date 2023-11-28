@@ -121,7 +121,7 @@ input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="p
 }
 @media(width <= 600px){
     #sign-up{
-        width: 65%;
+        width: 70%;
         height: 60%;
         background-image: url(/Img/login-signup2.jpg);
         background-position-x: right;
