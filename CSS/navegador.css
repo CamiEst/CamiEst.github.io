@@ -168,6 +168,43 @@
     #nav__user{
         margin-right: -12px;
     }
+
+    .logged{
+        height: 50px;
+        margin-right: 10px !important;
+    }
+    #user-icon{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+    #user-name{
+        height: 100%;
+        max-width: 50px;
+    }
+    #user-name h1{
+        margin:0;
+        padding:0;
+        text-align: start;
+        font-size: 9px;
+        font-weight: 300;
+        margin-left: -10px;
+        margin-right: 20px;
+    }
+    #log-out{
+        width: 30px;
+    }
+    #log-out p{
+        margin-left: 5px;
+        font-size: 10px;
+        font-weight: 300;
+        color: #f87f8f;
+    }
+    #log-out__confirm h1{
+        font-size: 18px;
+        font-weight: 400;
+    }
 }
 @media(width <= 500px){
     #nav__hidder{
@@ -227,9 +264,7 @@
     }   
 
     .logged{
-        background-color: #f6e9ea;
-        border-radius: 50px;
-        border: #f87f8f 1px solid;
+        height: 50px;
     }
     #user-icon{
         width: 50px;
@@ -240,32 +275,32 @@
     #user-name{
         height: 100%;
         max-width: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     #user-name h1{
         margin:0;
         padding:0;
-        text-align: center;
-        font-size: 10px;
+        text-align: start;
+        font-size: 9px;
         font-weight: 300;
-        margin-right: 15px;
+        margin-left: -10px;
+        margin-right: 20px;
     }
     #log-out{
-        width: 50px;
-        margin-right: 10px;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 30px;
     }
     #log-out p{
         margin-left: 5px;
-        font-size: 13px;
-        font-weight: 400;
+        font-size: 10px;
+        font-weight: 300;
         color: #f87f8f;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        cursor: pointer;
+    }
+
+    #log-out__confirm{
+        width: 60%;
+        height: 30vh;
+    }
+    #log-out__confirm h1{
+        font-size: 18px;
+        font-weight: 400;
     }
 }

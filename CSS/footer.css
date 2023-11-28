@@ -73,9 +73,6 @@ footer{
         height: 70px;
         margin: 0px 0px 0px 20px;
     }
-    #footer__top{
-        justify-content: center;
-    }
     #footer__top ul{
         width: 50%;
         justify-content: center;
