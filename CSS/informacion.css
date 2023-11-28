@@ -121,10 +121,10 @@
     color: #f87f8f;
 }
 
-@media(500px < width <= 1100px){
+@media(600px < width <= 1100px){
     
 }
-@media(width <= 500px){
+@media(width <= 600px){
     #info{
         width: 90%;
         height: 700px

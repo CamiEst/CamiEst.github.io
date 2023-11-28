@@ -4,19 +4,4 @@
 @import url(/CSS/navegador.css);
 @import url(/CSS/buscador.css);
 @import url(/CSS/items.css);
-
-body{
-    background-image: none;
-    background-color: white;
-}
-main{
-    padding-top: 83px;
-    flex-direction: row;
-    justify-content: end;
-    min-height: 100vh;
-}
-header{
-    background-color: white;
-    border-radius: 0px;
-    width: 100%;
-}
+@import url(/CSS/general2.css);

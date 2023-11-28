@@ -33,7 +33,7 @@ header{
     font-family:cursive;
     text-shadow: 2px 2px 2px #ff0055;
 }
-@media(width <= 500px){
+@media(width <= 600px){
     .logo__name{
         max-width: 100px;
     }

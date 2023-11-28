@@ -4,7 +4,7 @@
     top: 0;
     width: 20%;
     height: 100%;
-    margin-top: 84px;
+    margin-top: 83px;
     padding-top: 20px;
     background-color: rgb(255, 140, 140);
     border: #f87f8f 10px solid;
@@ -159,5 +159,71 @@
     border: #ffffff 1px solid;
     box-shadow: 0px 0px 2px #f65066;
     background-color: #f65066;
-    align-self: center;
+    margin-inline: auto;
+}
+#searcher__hidder{
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 208, 208, 0.81);
+    position: fixed;
+    top: 82px;
+    left: 0;
+    margin: 0;
+    border: solid 2px white;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 91;
+}
+@media(600px < width <= 1100px){
+    #searcher__hidder{
+        display: none;
+    }
+    #products__searcher{
+        display: block !important;
+        width: 25%;
+        padding-top: 15px;
+    }
+    #products__searcher div{
+        margin: 8px;
+    }
+    .valuePrice__container{
+        margin-top: 2px;
+    }
+    .search-by-occasion span{
+        margin-block: 2px;
+    }
+    #send{
+        margin-inline: 25%;
+    }
+}
+@media(width <= 600px){
+    #searcher__hidder{
+        display: block;
+    }
+    #products__searcher{
+        display: none;
+        z-index: 90;
+        height: 60%;
+        width: 50%;
+        align-self: self-end;
+    }
+    .expand{
+        animation: expand 1.2s ease-in-out 0s 1 reverse;
+    }
+    .contract{
+        animation: contract 1.2s ease-in-out 0s 1 reverse;
+    }
+
+    @keyframes expand {
+        0%{top: 0;}
+        100%{top: 100%;}
+    }
+    @keyframes contract {
+        0%{top: 100%;}
+        100%{top: 0;}
+    }   
+    #products__searcher h1{
+        text-align: center;
+    }
 }

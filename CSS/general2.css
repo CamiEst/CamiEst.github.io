@@ -1,0 +1,25 @@
+body{
+    background-image: none;
+    background-color: white;
+}
+main{
+    padding-top: 83px;
+    flex-direction: row;
+    justify-content: end;
+    min-height: 100vh;
+}
+header{
+    background-color: white;
+    border-radius: 0px;
+    width: 100%;
+}
+@media(width <= 600px){
+    #nav__list{
+        display: flex;
+        margin-top: -40px;
+    }
+    .nav__item{
+        border: none;
+        background-color: transparent;
+    }
+}

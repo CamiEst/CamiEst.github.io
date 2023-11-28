@@ -149,17 +149,57 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
 }
 
-@media(500px < width <= 900px){
-
+@media(600px < width <= 1100px){
+    #products__container{
+        width: 75%;
+    }
+    .product__item{
+        width: 49%;
+        height: 120px;
+    }
+    .product__name{
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .product__price{
+        font-size: 6px;
+        font-weight: 400;
+    }
+    .product__text{
+        font-size: 8px;
+        font-weight: 300;
+    }
+    .add-to-car{
+        width: 20px;
+    }
 }
-@media(width <= 500px){
-
+@media(width <= 600px){
+    #products__container{
+        width: 100%;
+    }
+    .product__item{
+        width: 99%;
+        height: 180px;
+    }
+    .product__name{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .product__price{
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .product__text{
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .add-to-car{
+        width: 30px;
+    }
+    #not-logged{
+        height: 70px;
+    }
+    #not-logged h3{
+        font-size: 13px;
+    }
 }
-/* 
-@media(500px < width <= 900px){
-
-}
-@media(width <= 500px){
-
-}
-*/

@@ -120,3 +120,19 @@ function logged(log){
     log.classList.remove('hidden');
     setTimeout(()=>{log.classList.add('hidden')}, 3000);
 }
+
+function showSearch(){
+    const item = document.getElementById('products__searcher');
+    const stylee =  window.getComputedStyle(item).display;
+    
+    if(stylee === "none"){
+        item.style.display = 'flex';
+        item.classList.remove('contract');
+        item.classList.add('expand');
+    } else{
+        item.classList.remove('expand');  
+        item.classList.add('contract');
+        setTimeout(()=>{item.style.display = 'none'}, 1200);
+    }
+
+}

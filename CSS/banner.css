@@ -30,12 +30,12 @@
     text-shadow: 1px 1px 3px #ffffff;
     margin: 0px;
 }
-@media(width<=900px){
+@media(600px < width <= 1100px){
     .banner{
         margin-block: 10px;
     }
 }
-@media(width<=500px){
+@media(width <= 600px){
     .banner{
         margin-block: 130px;
     }

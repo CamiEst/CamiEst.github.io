@@ -65,10 +65,7 @@ footer{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
-@media(500px < width <= 900px){
-
-}
-@media(width <= 500px){
+@media(width <= 600px){
     .footer__logo__icon{
         height: 70px;
         margin: 0px 0px 0px 20px;

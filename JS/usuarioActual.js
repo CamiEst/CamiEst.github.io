@@ -50,6 +50,8 @@ function confirm(hasConfirmed){
 
         sessionStorage.removeItem('HAS_LOGGED');
         sessionStorage.removeItem('USER_LOGGED');
+
+        location.reload();
     }
     else{
         const log = document.getElementById('nav__user');

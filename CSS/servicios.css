@@ -115,7 +115,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
 }
-@media(500px < width <= 1100px){
+@media(600px < width <= 1100px){
     #services{
         height: 250px;
     }
@@ -135,7 +135,7 @@
         padding: 0;
     }
 }
-@media(width <= 500px){
+@media(width <= 600px){
     #services{
         height: 1000px;
         display: grid;
