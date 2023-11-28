@@ -294,7 +294,6 @@
         font-weight: 300;
         color: #f87f8f;
     }
-
     #log-out__confirm{
         width: 60%;
         height: 30vh;
@@ -303,4 +302,11 @@
         font-size: 18px;
         font-weight: 400;
     }
+    #log-in .nav__link{
+        font-size: 10px;
+    }
+    #sign-up .nav__link{
+        font-size: 10px;
+    }
+
 }
