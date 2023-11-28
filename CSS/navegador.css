@@ -158,19 +158,21 @@
     border: #ff0055 1px solid;
     color: #ff0055;
 }
-@media(width<=900px){
-    
+@media(500px < width <= 900px){
+    #nav__list{
+        display: flex !important;
+    }
 }
-@media(width<=500px){
+@media(width <= 500px){
     #nav__hidder{
         display: block;
     }
     #nav__list{
         display: none;
         height: 50px;
-        width: 400px;
+        width: 350px;
         top: 105px;
-        left: 250px;
+        left: 225px;
         padding: 0;
         margin: 0;     
         flex-direction: row;
@@ -190,6 +192,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .nav__link{
+        font-size: 14px;
     }
     .animation{
         animation-name: appear;
